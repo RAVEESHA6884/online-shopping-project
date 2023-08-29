@@ -1,0 +1,134 @@
+USE ecommerce_cart
+
+CREATE TABLE `orders` (
+  `o_id` INT NOT NULL AUTO_INCREMENT,
+  `p_id` INT NOT NULL,
+  `u_id` INT NOT NULL,
+  `o_quantity` INT NOT NULL,
+  `o_date` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`o_id`)
+) 
+SHOW TABLES
+DESC orders
+
+INSERT INTO `orders` VALUES (25,3,1,3,'2021-05-15'),(26,2,1,1,'2021-05-15');
+SELECT * FROM orders
+
+CREATE TABLE `products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+
+SELECT * FROM products
+
+CREATE TABLE `users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(250) NOT NULL,
+  `email` VARCHAR(250) NOT NULL,
+  `password` VARCHAR(250) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email_UNIQUE` (`email`)
+) 
+ENGINE=INNODB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+INSERT INTO `users` VALUES (1,'Almamun','almamun@mail.com','123456','123456');
+DESC users
+SELECT * FROM users
+COMMIT
+INSERT INTO users VALUES ('2','raveesh','raveesha404@gmail.com','1234','1234');
+
+INSERT INTO `products` VALUES (1,'New Arrival Laptop','Laptop',999,'Laptop-1.jpg');
+
+CREATE TABLE `products2` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products2
+
+INSERT INTO `products2` VALUES (8,'New Arrival Laptops','Laptop',599,'Laptop-9.jpg');
+
+CREATE TABLE `products3` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products3
+INSERT INTO `products3` VALUES (8,'New Arrival Ladies-Bag','Ladies-Bag',599,'Ladis-bag-9.jpg');
+
+
+CREATE TABLE `products4` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products4
+INSERT INTO `products4` VALUES (1,'New Arrival T-Shirts','T-shirt',125,'T-shirt-1.jpeg');
+
+CREATE TABLE `products5` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products5
+INSERT INTO `products5` VALUES (1,'New Arrival T-Shirts','T-shirt',125,'T-shirt-1.jpeg');
+
+CREATE TABLE `products6` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products6
+INSERT INTO `products6` VALUES (1,'New Arrival T-Shirts','T-shirt',125,'T-shirt-1.jpeg');
+
+CREATE TABLE `products7` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products7
+INSERT INTO `products7` VALUES (1,'New Arrival T-Shirts','T-shirt',125,'T-shirt-1.jpeg');
+
+CREATE TABLE `products8` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products8
+INSERT INTO `products8` VALUES (1,'New Arrival T-Shirts','T-shirt',125,'T-shirt-1.jpeg');
+
+CREATE TABLE `products9` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(450) NOT NULL,
+  `category` VARCHAR(450) NOT NULL,
+  `price` DOUBLE NOT NULL,
+  `image` VARCHAR(450) NOT NULL,
+  PRIMARY KEY (`id`)
+) 
+SELECT * FROM products9
+INSERT INTO `products9` VALUES (1,'New Arrival T-Shirts','T-shirt',125,'T-shirt-1.jpeg');
